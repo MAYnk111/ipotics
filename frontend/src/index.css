@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-terminal: #020408;
+    --border-terminal: rgba(255, 255, 255, 0.1);
+    --border-terminal-subtle: rgba(255, 255, 255, 0.05);
+    --text-primary: #f8fafc;
+    --text-muted: #64748b;
+    --text-dim: #334155;
+    --accent-cyan: #38bdf8;
+    --accent-emerald: #10b981;
+    --accent-rose: #f43f5e;
+    --accent-amber: #f59e0b;
+    --accent-violet: #a855f7;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    background-color: #020408;
+    color: #e2e8f0;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Geist", "Segoe UI", Roboto, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Professional Bloomberg/TradingView style monospace telemetry */
+  .font-mono, .terminal-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  }
+
+  /* Precision scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #020408;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e293b;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+/* Sharp, technical terminal panels - neutral graphite-black surfaces, anti-AI roundness */
+.terminal-panel {
+  background: rgba(12, 13, 14, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+.terminal-panel-active {
+  background: rgba(14, 16, 18, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: 3px;
+}
+
+.terminal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 8px 12px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.terminal-grid-lines {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
